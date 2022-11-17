@@ -106,7 +106,7 @@ def convert_participio(verbo):
         return (verbo.replace('ir', 'ido'))
 
 def generar_verbo():
-    n = random.randint(3, 10)
+    n = random.randint(3, 6)
     c='bcdfgjlmnprstvz'
     v='aeiou'
     sufix= ["ar", "er", "ir"]
@@ -149,6 +149,7 @@ def generador():
         if (numero_de_palabras != 1):
             s = espace(s, temp)
         numero_de_palabras = numero_de_palabras - 1
+        key_de_palabra = random.randint(0, 10)
     return s
 
 print(generador())
