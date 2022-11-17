@@ -1,11 +1,16 @@
 import ramdom
+from Dicsustantivos.py import Dictsustantivos
+from conectores.py import generate_conectores
+from space.py import space
+from verbos.py import verbos
+
 def genrator():
     al = random.randint(1,2)
     final = "";
-    final = final.join(sustantivo())
-    final = final.join(espacio())
+    final = final.join(Dicsustantivos())
+    final = final.join(space())
     if al == 1)
-        final = final.join(verbo())
+        final = final.join(verbos())
     else:
         final = final.join(adjetivo())
     al = random.randint(1,2);
