@@ -1,17 +1,17 @@
 import random
 from sys import exit
-with open("diccionario/Dicverbos.txt", 'r') as f:
+with open("diccionario/verbos.txt", 'r') as f:
     verb = f.read().splitlines()
 
 def select_verbo():
     return random.choice(verb)
 
 def convert_participio(verbo):
-    if (verbo[len(verbo) - 2] == 'a'):
+    if (verbo[len(verbo) - 2] == 'a' and verbo[len(verbo) - 1] == 'r'):
         return (verbo.replace('ar', 'ado'))
-    if (verbo[len(verbo) - 2] == 'e'):
+    if (verbo[len(verbo) - 2] == 'e' and verbo[len(verbo) - 1] == 'r'):
         return (verbo.replace('er', 'ido'))
-    if (verbo[len(verbo) - 2] == 'i'):
+    if (verbo[len(verbo) - 2] == 'i' and verbo[len(verbo) - 1] == 'r'):
         return (verbo.replace('ir', 'ido'))
 
 def generar_verbo(n):
